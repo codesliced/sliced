@@ -1,0 +1,17 @@
+6/5/2013
+
+Added home nav to layout.erb
+Added styling for nav in application.css
+
+6/6
+
+Adding loging in current user
+Bcrypt to gemfile and environment
+
+6/7
+
+Adding a view for tables
+
+git remote set-url https....
+git push -u origin master
+

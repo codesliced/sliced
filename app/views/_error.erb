@@ -1,0 +1,6 @@
+    <%=errors.class%>
+    <ul>
+      <% errors.each do  |error, message| %>
+        <li><%= error %>:<%= message %></li>
+      <% end %>
+    </ul>
