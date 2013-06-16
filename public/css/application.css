@@ -1,17 +1,3 @@
-/** {
-   border: 1px solid red !important;
-}*/
-
-/*.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}*/
-th {
-  text-align: left;
-}
-
 .header{
   background-color: #061021;
   height: 50px;
@@ -26,16 +12,16 @@ th {
   padding-bottom: 25px;
 }
 
- .nav a {
+ .nav a:link {
   padding-right: 15px;
   float: right;
   line-height: 50px;
   text-decoration: none;
-  color: white;
+  color: #FFF4F0;
 }
 
 .nav a:hover {
-  color: gray;
+  color: #5A78B0;
 }
 
 
@@ -47,48 +33,54 @@ th {
 
 body, select, input, textarea {  
     color: #444;  
-    font-family: Helvetica, Arial, sans-serif; 
-    background-color: #E8E8E8;
+    font-family: josefin-sans, sans-serif;
+    background-color: #EBCEBA;
 }  
-
-.container {
-  margin: 20px auto;
-  width: 700px;
-  padding: 0px 20px 20px 20px;
-  border: 2px solid orange;
-  background-image: url(../src/Damask/Retro.Damask.jpg);
-  background-color: skyblue;
-  border-radius: 20px;
-   
-}
 
 label {
   text-align: right;
 }
 
+.signup_container {
+  background-color: #FFF4F0;
+  width:400px;
+  border: 3px #061021 solid;
+  border-radius:5px;
+  margin: 20px auto;
+  padding-left: 75px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.signup_container input {
+  float: right;
+  margin-left: 10px;
+  background-color: #ede4e1;
+}
 
 .create_user {
   width: 80%;
 }
 
 .login {
+  margin-top: 40px;
   width: 80%;
 }
 
 .create_row1 {
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .create_row2 {
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .create_row3 {
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .create_row4 {
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .create_user input {
@@ -97,33 +89,6 @@ label {
 
 }
 
-.login input {
-  float: right;
-  margin-left: 10px;
-
-}
-
-.signup_container {
-  background-color: #D1D1D1;
-  width:400px;
-  border: 2px #53777A solid;
-  border-radius:10px;
-  margin: 20px auto;
-  padding-left: 75px;
-  padding-top: 20px;
-  padding-bottom: 100px;
-}
-
-.signup_container h1 {
-  /*color: white;*/
-}
-
-
-#submit_button {
-  background-color: #FF9966;
-  border: 1px solid orange;
-  border-radius: 10px;
-}
 
 li {
   font-size: 12px;
@@ -138,11 +103,11 @@ img {
 
 
 h1, h2 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: josefin-sans, sans-serif;
 }
 
 h3 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: josefin-sans, sans-serif;
 }
 
 
@@ -163,59 +128,6 @@ h3 {
   text-decoration: none;
 }
 
-.deck_of_cards {
-  float:left;
-  height: 100px;
-  width: 250px;
-  background-color: #53777A;
-  /*margin-left:20px;*/
-  margin-bottom: 20px;
-  margin-right:10px;
-  text-align: center;
-  padding-top: 50px;
-  font-size:30px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 14px rgba(50, 50, 50, 0.75);
-  font-family: 'Sorts Mill Goudy', serif;
-}
-
-
-.deck_of_cards:hover {
-  background-color: rgb(215, 48, 39);
-}
-
-
-.stats_container{
-  width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
-}
-
-.stats_container h3 {
-  text-align: center;
-}
-
-.stats_container a{
-  color: white;
-  text-decoration: none;
-}
-
-.round {
-  font-size:20px;
-  margin-bottom:10px;
-}
-
-.right {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.wrong {
-  display: inline-block;
-}
-
 .border {
   margin-top: 5px;
   margin-bottom: 20px;
@@ -223,60 +135,6 @@ h3 {
   display: block;
 }
 
-#click{
-  font-size: 10px;
-  font-style: italic;
-}
-
-#card{
-  width: 600px;
-  height: 300px;
-  margin:0 auto;
-  border: 1px solid #;
-  display: table;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #ECF0F1;
-  -webkit-box-shadow: 7px 7px 19px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    7px 7px 19px rgba(50, 50, 50, 0.75);
-  box-shadow:         7px 7px 19px rgba(50, 50, 50, 0.75);
-}
-
-#card-content{
-  margin:auto; 
-  display:table-cell; 
-  vertical-align:middle;
-  padding-left:20px;
-  padding-right:20px;
-   text-align: center;
-   font-size: 28px;
-   line-height: 36px;
-   font-family: sans-serif;
-   padding-right: 40px;
-   padding-left: 40px
-  }
-
-#buttons {
-  background-color: red;
-}
-#card-nav{
-  margin:0 auto;
-  padding-top:30px;
-  width: 600px;
-  text-align: center;
-}
-
-#deck-name {
-  margin-top: 150px;
-  text-align: center;
-}
-
-#deck-name h2 {
-  font-family: 'Sorts Mill Goudy', serif;
-  font-size: 36px;
-  color: rgb(215, 48, 39);
-}
 
 .button {
   float: left;
@@ -289,69 +147,20 @@ h3 {
   padding-right: 30px;
   text-decoration: none;
   color: #fff;
-/*  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;*/
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 12px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    2px 2px 12px rgba(50, 50, 50, 0.75);
   box-shadow:         2px 2px 12px rgba(50, 50, 50, 0.75);
-  animated
 }
 
 .button:hover {
   background-color: #3C3251;
 }
 
-#btn_right {
-  float: right;
-  background-color: #53777A;
-  margin: 20px;
-  margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-decoration: none;
-  color: #fff;
-/*  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;*/
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 12px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    2px 2px 12px rgba(50, 50, 50, 0.75);
-  box-shadow:         2px 2px 12px rgba(50, 50, 50, 0.75);
-}
-
-#btn_right:hover {
-  background-color: #3C3251;
-}
-
-#btn_wrong {
-  float: right;
-  background-color: #53777A;
-  margin: 20px;
-  margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-decoration: none;
-  color: #fff;
-/*  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;*/
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 12px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    2px 2px 12px rgba(50, 50, 50, 0.75);
-  box-shadow:         2px 2px 12px rgba(50, 50, 50, 0.75);
-}
-
-#btn_wrong:hover {
-  background-color: #3C3251;
-}
-
 
 #log_in {
   float: right;
-  background-color: #53777A;
+  background-color: #061021;
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -361,12 +170,10 @@ h3 {
   color: white;
   font-size: 12px;
   margin-bottom: 25px;
-/*  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;*/
 }
 
 #log_in:hover {
-  background-color: #3C3251;
+  background-color: #B82D22;
 }
 
 label {
@@ -375,7 +182,7 @@ label {
 
 #create {
   float: right;
-  background-color: #53777A;
+  background-color: #061021;
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -384,32 +191,10 @@ label {
   text-decoration: none;
   color: white;
   font-size: 12px;
-/*  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;*/
 }
 
 #create:hover {
-  background-color: #3C3251;
+  background-color: #B82D22;
 }
 
 
-/*.green {
-  background-color: rgb(12, 227, 255); 
-}
-
-.red {
-  background-color: rgb(252, 141, 89);
-}*/
-
-
-/*
-
-#FFED90 yellow
-#A8D46F lime
-#359668 green
-#3C3251 light purple
-#341139 deep purple
-
-
-*/
-  

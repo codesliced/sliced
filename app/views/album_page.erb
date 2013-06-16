@@ -1,7 +1,7 @@
-<div class="intro_container">
+<div class="album_container">
 <!--   <h3>Choose a Deck</h3> -->
 
-<span class="album_title"><%= @album.album_name %></span> <span class="username"><%= @album.user.username %></span>
+<div class="album_title"><%= @album.album_name %><span class="username">  <%= @album.user.username %></div>
 <% @album.photos.each do |photo| %>
 <div class="photo"><img src="<%=photo.path || photo.file%>">
 <div class="caption"><%= photo.title %></div>

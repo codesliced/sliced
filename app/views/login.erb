@@ -5,9 +5,6 @@
     <body>
         <div class="signup_container">
             <% if @errors %><%= erb :_error, :locals => {errors: @errors }%><% end %>
-            <h1>
-                Welcome
-            </h1>
             <div class="create_user">
                 <form name='create_user' action='/create_user' method='post'>
                     <h2>
@@ -24,7 +21,7 @@
                     </div>
                     <div>
                         <input type='submit' value='Create' id="create">
-                    </div><br>
+                    </div><br><p><p>
                 </form>
             </div>
             <div class='login'>

@@ -29,7 +29,7 @@ fieldset, img {
 }
 
 input, textarea, select, button {
-    font-family: helvetica, arial;
+    font-family: josefin-sans, sans-serif;
     font-size: 110%;
     line-height: 1.1;
 }
@@ -75,19 +75,9 @@ header a:hover {
     color: #061021;
 }
 
-/*.two-column {
-  padding: 1em;
-  -moz-column-count: 2;
-  -moz-column-gap: 1em;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 1em;
-  column-count: 2;
-  column-gap: 1em;
-}
-*/
-
 .album_thumb {
   float:left;
+  text-align: center;
   width: 200px;
 }
 .album_thumb img {
@@ -95,8 +85,8 @@ header a:hover {
   width:100px;
 }
 
-
 .album_title {
+  clear: left;
   margin-left: 15px;
   font-size: 18px; 
   font-family: sofia, fantasy;
@@ -113,7 +103,7 @@ header a:hover {
   line-height: 16px;
   text-transform:uppercase;
   letter-spacing: -0.5px;
-  font-family: helvetica, sans-serif;
+  font-family: josefin-sans, sans-serif;
     color: #061021;
     margin-bottom: 10px;
 }
@@ -129,3 +119,78 @@ header a:hover {
   text-align: center;
 }
 
+/* Album page */
+
+.album_container {
+  float: right;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.album_container .album_title {
+  float: left;
+  margin-left: 10px;
+  font-size: 24px; 
+  font-family: sofia, fantasy;
+  color: #5A78B0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.album_container .username {
+  margin-left: 20px;
+}
+
+.album_container .photo {
+  clear: all;
+}
+
+.album_container .caption {
+  margin-top: 5px;
+  clear: both;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.create_container {
+  float: right;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.create_container input {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.create_container input[type="text"] {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 300px;
+}
+
+.create_container input[type="file"] {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 300px;
+  border: none;
+}
+
+.create_container label {
+  margin-right: 20px;
+}
+
+
+/*  COLORS  
+
+--- Navy Sunrise ---
+
+Navy #061021
+Powder Blue #5A78B0
+Off White #FFF4F0
+Beige #EBCEBA
+Reddish #B82D22
+*/

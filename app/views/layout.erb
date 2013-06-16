@@ -16,7 +16,8 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-<script src="//use.edgefonts.net/sofia:n4:all.js"></script>
+  <script src="//use.edgefonts.net/sofia:n4:all.js"></script>
+  <script src="//use.edgefonts.net/josefin-sans.js"></script>
   <title></title>
 </head>
 <body>
@@ -29,7 +30,7 @@
     <%if current_user%>
       <a href='/logout'>Logout</a> 
       <a href="/user/<%=current_user.id%>">Welcome <%=current_user.username%>!</a>
-
+      <a href='/create_album'>Create an album</a> 
     <%else%>
       <a href='/login'> Login &bull; Sign up</a>
     <%end%>

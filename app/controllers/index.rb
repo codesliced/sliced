@@ -1,10 +1,5 @@
- get '/' do
-  if current_user
-    redirect to '/available_albums'
-  else
-    redirect to '/login'
-  end
-  # redirect to '/available_albums'
+get '/' do
+  redirect to '/available_albums'
 end
 
 
@@ -15,7 +10,7 @@ end
 
 
 get '/user/:user_id' do
-    user_id = params[:user_id]
+  user_id = params[:user_id]
     
 erb :user_profile
 end
@@ -27,9 +22,15 @@ get '/album/:album_id' do
 erb :album_page
 end
 
+
 get '/create_album' do
-  erb :create_album
+  if current_user
+    erb :create_album
+  else
+    redirect to '/login'
+  end
 end
+
 
 post '/create_album' do
   album = Album.new(params[:album])
@@ -48,6 +49,7 @@ get '/album/:album_id/upload' do
   
 erb :upload_photo
 end
+
 
 post '/album/:album_id/upload' do
   
