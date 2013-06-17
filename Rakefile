@@ -92,8 +92,8 @@ namespace :db do
   end
 
   desc "Drop the database at #{DB_NAME}"
-  task :dubstep do
-    puts "WUB WUB WUB WUB\nDropping the database #{DB_NAME}..."
+  task :dropitlikeitshot do
+    puts "Drop it like it's hot\nDropping the database #{DB_NAME}..."
     system("dropdb #{DB_NAME}")
   end
 
@@ -118,7 +118,7 @@ namespace :db do
   end
 
   desc "Drop, create, migrate and seed the database"
-  task :allthethings => [:dubstep, :create, :migrate, :seed] do
+  task :allthethings => [:dropitlikeitshot, :create, :migrate, :seed] do
     puts "Reset complete!"
   end
 
