@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
     validates :password, :length => { :minimum => 6 }
     has_many :albums
     has_many :photos, :through => :albums
+    include BCrypt
 
 
   def self.authenticate(params)
@@ -21,8 +22,8 @@ class User < ActiveRecord::Base
   end
 
   def self.create(params)
-    p @user = User.new(params)
-    p @user.password = (params[:password])
+    @user = User.new(params)
+    @user.password = (params[:password])
     @user.save!
     @user
   end

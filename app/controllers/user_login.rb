@@ -1,5 +1,5 @@
 post '/create_user' do
-  user = User.new(params[:form])
+  user = User.new(params[:user])
   if user.save
     session.clear
     session[:user_id] = user.id
