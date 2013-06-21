@@ -118,3 +118,11 @@ morephotos_seed.each do |p|
     album_id: albums2.pop
     )
 end
+
+20.times do
+  fave = Favorite.create(
+    heart: ((1..5).to_a).sample,
+    photo_id: ((1..14).to_a).sample,
+    user_id: ((1..7).to_a).sample,
+    )
+end

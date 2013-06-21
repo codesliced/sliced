@@ -1,7 +1,7 @@
 get '/' do
   redirect to '/available_albums'
-end
 
+end
 
 get '/available_albums' do
   @albums = Album.all
@@ -10,7 +10,8 @@ end
 
 
 get '/user/:user_id' do
-  user_id = params[:user_id]
+  @user = User.find(params[:user_id])
+  @albums_by_user = @user.albums
     
 erb :user_profile
 end
@@ -32,6 +33,7 @@ get '/create_album' do
 end
 
 
+
 post '/create_album' do
   album = Album.new(params[:album])
   album.user_id = current_user.id
@@ -44,6 +46,31 @@ post '/create_album' do
   redirect "/album/#{album.id}"
 end
 
+post '/delete/:id' do
+    @album = Album.find(params[:id])
+    if current_user.id == @album.user_id
+      @event.destroy
+      redirect '/'
+  else
+    redirect to 'login'
+  end
+end
+
+
+post '/photo/favorite' do
+  user_id = current_user.id
+  photo_id = params[:photo_id]
+  photo = Photo.find(photo_id)
+  heart = params[:heart].to_i
+  hearts = photo.favorites
+  Favorite.create(:photo_id => photo_id,
+                  :user_id => user_id,
+                  :heart => heart)
+  p "~~~~~~~~~~~~~~~~~~~~~~"
+  p heart
+  p "~~~~~~~~~~~~~~~~~~~~~"
+  redirect "/album/#{photo.album_id}"
+end
 
 get '/album/:album_id/upload' do
   

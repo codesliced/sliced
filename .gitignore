@@ -25,3 +25,8 @@ chromedriver.log
 bin/
 .env
 *.swp
+config/ig.yml
+config/environment_og.rb
+config/api_config.yml
+app/controllers/oauth.rb
+

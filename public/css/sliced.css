@@ -44,11 +44,6 @@ table {
     border-spacing: 0;
 }
 
-caption, th, td {
-    text-align: left;
-    vertical-align: top;
-    font-weight: normal;
-}
 
 li {
     list-style: none;
@@ -59,7 +54,7 @@ header {
     bottom: 0;
     left: 0;
     height: 150px;
-    width: 100%;
+    width: 20%;
     color: #FFF4F0;
     font-size: 60px;
     font-family: sofia, fantasy;
@@ -93,7 +88,6 @@ header a:hover {
   color: #5A78B0;
   text-align: center;
   margin-bottom: 50px;
-
 }
 
 .username {
@@ -114,10 +108,14 @@ header a:hover {
   margin-bottom: 25px;
 }
 
-.caption {
+.photo img {
+  width:400px;
+}
+
+/*.caption {
   font-size: 14px;
   text-align: center;
-}
+}*/
 
 /* Album page */
 
@@ -141,9 +139,9 @@ header a:hover {
   margin-left: 20px;
 }
 
-.album_container .photo {
+/*.album_container .photo {
   clear: all;
-}
+}*/
 
 .album_container .caption {
   margin-top: 5px;
@@ -172,17 +170,100 @@ header a:hover {
   width: 300px;
 }
 
-.create_container input[type="file"] {
+/*.create_container input[type="file"] {
   margin-bottom: 20px;
   margin-left: 10px;
   width: 300px;
   border: none;
-}
+}*/
+
+#file_button { 
+  position: relative; 
+  height: 80px; 
+  /*overflow: hidden;*/
+  /*background-image: url(../photos/folder_img_upload.png);*/
+  } 
+
+  #file_button img{ 
+    width: 60px; 
+    /*background-image: url(../photos/folder_img_upload.png);*/
+    } 
+
+  #file_button input { 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 60px;
+    font-size: 36px; 
+    opacity: 0; 
+    margin: 0; 
+    padding: 0; 
+    border: none; 
+  }
 
 .create_container label {
   margin-right: 20px;
 }
 
+.result-image.example { display: none;}
+.result-image {
+  float: left;
+  width: 308px;
+  height: 350px;
+  margin-right: 10px;
+}
+
+.user_container {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.user_container img{
+  width: 80%;
+}
+
+.created_albums {
+  width: 500px;
+}
+
+.date {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.second_line_faves{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+input[type=submit] {
+  background-color: #B82D22;
+  margin-left: 10px;
+  color: #FFF4F0;
+  border: 0;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+input[type=submit]:hover {
+  background-color: #5A78B0;
+}
+
+.hearts {
+  border-top: 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.my_album_title {
+  clear: left;
+  margin-left: 15px;
+  font-size: 18px; 
+  font-family: sofia, fantasy;
+  color: #5A78B0;
+  text-align: center;
+  margin-bottom: 5px;
+}
 
 /*  COLORS  
 

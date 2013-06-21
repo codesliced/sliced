@@ -1,7 +1,14 @@
-<div class="stats_container">
-<h1>All about me</h1>
-<h2>Hey <%= current_user.username.capitalize %>!</h2>
+<div class="user_container">
+<h1><%= current_user.username.capitalize %>'s Albums</h1>
 
+<div class="created_albums">
+<% @albums_by_user.each do |album| %>
+ <div class="name"><a href="/album/<%= album.id %>"><img src="<%=album.photos.first.path || album.photos.first.file.thumb%>"></a></div>
+ <div class="my_album_title"><%=album.album_name%></div>
+ <div class="date">Created: <%=album.created_at.strftime("%b %d, %Y")%> <span class="trash">
+  <a href="#"><i class="icon-trash"></i></a></span></div>
+ 
+   <% end %>
 
 </div>
 </div>

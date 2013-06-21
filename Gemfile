@@ -1,4 +1,6 @@
-source :rubygems
+source 'https://rubygems.org'
+
+ruby '1.9.3'
 
 # PostgreSQL driver
 gem 'pg'
@@ -19,9 +21,13 @@ gem 'bcrypt-ruby'
 gem 'carrierwave'
 gem "mini_magick"
 
-gem 'shotgun'
+gem 'oauth'
+gem 'instagram'
 
-group :test do
+
+group :development, :test do
+  gem 'shotgun'
   gem 'faker'
   gem 'rspec'
 end
+

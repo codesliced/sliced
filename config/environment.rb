@@ -18,9 +18,14 @@ require 'logger'
 require 'sinatra'
 require "sinatra/reloader" if development?
 
+require 'shotgun' if development?
+
 require 'faker'
 require 'erb'
 require 'bcrypt'
+
+require 'oauth'
+require 'instagram'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -36,6 +41,16 @@ CarrierWave.configure do |config|
   config.directory_permissions = 0777
   config.root = "#{Dir.pwd}/public"
   config.storage = :file
+end
+
+SETTINGS = YAML.load_file(File.expand_path('../ig.yml', __FILE__))
+SETTINGS.each_pair do |key, value|
+  ENV[key] = value
+end
+
+Instagram.configure do |config|
+  config.client_id = ENV["client_id"]
+  config.client_secret = ENV["client_secret"]
 end
 
 # Set up the controllers and helpers

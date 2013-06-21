@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
     validates :email, :uniqueness => :true
     validates :password, :length => { :minimum => 6 }
     has_many :albums
-    has_many :photos, :through => :albums
+    # has_many :photos, :through => :albums
+    has_many :favorites
+    has_many :photos, :through => :favorites, :source => :fan
     include BCrypt
 
 

@@ -1,3 +1,3 @@
-Photo uploading site with albums
+Photo albums
 
-Uses Sinatra, CarrierWave and ImageMagick
+Uses Sinatra, CarrierWave and ImageMagick.
