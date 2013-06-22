@@ -1,19 +1,21 @@
 $(document).ready(function () {
-  // $('#falseinput').click(function(event){
-  //     event.preventDefault();
-  //    $('#fileinput').click();
+
+  // $('.favorites').submit(function(event){
+  //   event.preventDefault();
+  //   var url = $(this).attr("action");
+  //   var data = $(this)attr('photo_id').serialize();
+  //   $.post(url, data, function(response){
+  //       alert(data);
+  //   });
   // });
-  
 
-
-    $('#myForm').submit(function (event) {
-        event.preventDefault();
-        //console.log($('input[name=username]').val());
-        var data = {
-            username: $('input[name=username]').val()
-        };
-        $.get('/images.html', data, function (html) {
-            $('.results').append(html);
-        });
-    });
+    // $('#myForm').submit(function (event) {
+    //     event.preventDefault();
+    //     var data = {
+    //         username: $('input[name=username]').val()
+    //     };
+    //     $.get('/images.html', data, function (html) {
+    //         $('.results').append(html);
+    //     });
+    // });
 });

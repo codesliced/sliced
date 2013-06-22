@@ -1,6 +1,6 @@
 <div class="create_container">
 
-<form action="/create_album" method="post" enctype="multipart/form-data">
+<form action="/create_album" method="post" enctype="multipart/form-data" multiple="true">
   <label>Album name:
     <input type="text" name="album[album_name]" placeholder="album name"></label> 
     <br>
@@ -9,6 +9,11 @@
     <input type="file" name="photo[file]"></div>
    <label>Photo caption:
    <input type="text" name="photo[title]" placeholder="caption"></label> <br>
+   <div id="file_button">
+     <!-- <img src="photos/folder_img_upload.png"> --><i class="icon-camera"></i> Select photo
+     <input type="file" name="photo[file]"></div>
+    <label>Photo caption:
+    <input type="text" name="photo[title]" placeholder="caption"></label> <br>
   <input type="submit" name="submit" value="Upload">
 </form>
 

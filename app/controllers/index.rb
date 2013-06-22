@@ -33,11 +33,11 @@ get '/create_album' do
 end
 
 
-
 post '/create_album' do
   album = Album.new(params[:album])
   album.user_id = current_user.id
   album.save
+
 
   photo = Photo.new(params[:photo])
   photo.album_id = album.id
@@ -57,6 +57,16 @@ post '/delete/:id' do
 end
 
 
+post '/photo/delete/:id' do
+    @photo = Photo.find(params[:id])
+    if current_user.id == @album.user_id
+      @event.destroy
+      redirect '/'
+  else
+    redirect to 'login'
+  end
+end
+
 post '/photo/favorite' do
   user_id = current_user.id
   photo_id = params[:photo_id]
@@ -66,9 +76,6 @@ post '/photo/favorite' do
   Favorite.create(:photo_id => photo_id,
                   :user_id => user_id,
                   :heart => heart)
-  p "~~~~~~~~~~~~~~~~~~~~~~"
-  p heart
-  p "~~~~~~~~~~~~~~~~~~~~~"
   redirect "/album/#{photo.album_id}"
 end
 

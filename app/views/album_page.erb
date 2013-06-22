@@ -4,11 +4,12 @@
 <div class="photo"><img src="<%=photo.path || photo.file%>"><br/>
 <span class="caption"><%= photo.title %> </i></span>
 <div class="second_line_faves">
-     <form action="/photo/favorite" method="post" class="favorites">
+    <form action="/photo/favorite" method="post" class="favorites">
       <input type="hidden" name="heart" value="1">
       <input type="hidden" value="<%= photo.id%>" name="photo_id">
       <span class="hearts"><%= photo.favorites.sum('heart')%> <i class="icon-heart"></i>
       <input class="post_btn" type="submit" value="Love"></span>
+    </form>
 </div>
 </div>
 <% end %>
