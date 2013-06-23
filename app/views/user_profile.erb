@@ -1,14 +1,18 @@
+<div class="modify_sidebar"><a href="/create_album"><i class="icon-plus"></i> Add an album</a>
+</div>
 <div class="user_container">
+
 <h1><%= current_user.username.capitalize %>'s Albums</h1>
 
 <div class="created_albums">
 <% @albums_by_user.each do |album| %>
- <div class="name"><a href="/album/<%= album.id %>"><img src="<%=album.photos.first.path || album.photos.first.file.thumb%>"></a></div>
+<% unless album.photos.empty? %>
+ <div class="name"><a href="/user/album/<%= album.id %>"><img src="<%=album.photos.first.path || album.photos.first.file.thumb%>"></a></div>
  <div class="my_album_title"><%=album.album_name%></div>
- <div class="date">Created: <%=album.created_at.strftime("%b %d, %Y")%> <span class="trash">
-  <a href="#"><i class="icon-trash"></i></a></span></div>
+ <div class="date">Created: <%=album.created_at.strftime("%b %d, %Y")%> 
+  <span class="modify_icons"> <a href="/user/album/<%=album.id%>"><i class="icon-edit"></i></a></span> <a href="#"><i class="icon-trash"></i></a></span></div>
  
    <% end %>
-
+<% end %>
 </div>
 </div>

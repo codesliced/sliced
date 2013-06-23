@@ -1,6 +1,6 @@
 <div class="create_container">
-
-<form action="/create_album" method="post" enctype="multipart/form-data" multiple="true">
+<% @album %>
+<form action="/album/upload/<%= @album.id %>" method="post" enctype="multipart/form-data" multiple="true">
   <label>Album name:
     <input type="text" name="album[album_name]" placeholder="<%=@album.album_name %>"></label> 
     <br>
